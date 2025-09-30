@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English 125 Grade Breakdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #1a1a1a;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #00274C;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        /* Pie Chart */
+        .pie-chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .pie-chart {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #00274C 0% 30%,
+                #FFCB05 30% 50%,
+                #00B2A9 50% 70%,
+                #A5A508 70% 80%,
+                #702082 80% 100%
+            );
+            margin: 0 auto 20px;
+            position: relative;
+        }
+        
+        .pie-chart::after {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Legend */
+        .legend {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 400px;
+        }
+        
+        .legend h2 {
+            color: #00274C;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+        
+        .legend-color {
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .legend-text {
+            flex: 1;
+        }
+        
+        .legend-label {
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+        
+        .legend-detail {
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .legend-percent {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #00274C;
+            margin-left: 10px;
+        }
+        
+        /* Bar Chart Alternative */
+        .bar-chart {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 800px;
+            margin-top: 40px;
+        }
+        
+        .bar-chart h2 {
+            color: #00274C;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        
+        .bar-item {
+            margin-bottom: 20px;
+        }
+        
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+        
+        .bar-track {
+            width: 100%;
+            height: 40px;
+            background: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .bar-fill {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 15px;
+            color: white;
+            font-weight: bold;
+            transition: width 1s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .pie-chart {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>English 125: How Your Grade is Calculated</h1>
+    
+    <div class="container">
+        <div class="pie-chart-container">
+            <h2 style="color: #00274C;">Grade Distribution</h2>
+            <div class="pie-chart" role="img" aria-label="Pie chart showing grade breakdown: Active Engagement 30%, Project 1 20%, Project 2 20%, Project 3 20%, Project 4 10%"></div>
+        </div>
+        
+        <div class="legend">
+            <h2>What Counts Toward Your Grade</h2>
+            
+            <div class="legend-item">
+                <div class="legend-color" style="background: #00274C;"></div>
+                <div class="legend-text">
+                    <div class="legend-label">Active Engagement</div>
+                    <div class="legend-detail">Attendance, participation, workshops</div>
+                </div>
+                <div class="legend-percent">30%</div>
+            </div>
+            
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FFCB05;"></div>
+                <div class="legend-text">
+                    <div class="legend-label">Project 1</div>
+                    <div class="legend-detail">Writing Self-Analysis or Narrative</div>
+                </div>
+                <div class="legend-percent">20%</div>
+            </div>
+            
+            <div class="legend-item">
+                <div class="legend-color" style="background: #00B2A9;"></div>
+                <div class="legend-text">
+                    <div class="legend-label">Project 2</div>
+                    <div class="legend-detail">Analyzing Others' Writing</div>
+                </div>
+                <div class="legend-percent">20%</div>
+            </div>
+            
+            <div class="legend-item">
+                <div class="legend-color" style="background: #A5A508;"></div>
+                <div class="legend-text">
+                    <div class="legend-label">Project 3</div>
+                    <div class="legend-detail">Literature Review</div>
+                </div>
+                <div class="legend-percent">20%</div>
+            </div>
+            
+            <div class="legend-item">
+                <div class="legend-color" style="background: #702082;"></div>
+                <div class="legend-text">
+                    <div class="legend-label">Project 4</div>
+                    <div class="legend-detail">Digital Essay or Writing Guide</div>
+                </div>
+                <div class="legend-percent">10%</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="bar-chart">
+        <h2>Grade Breakdown (Bar View)</h2>
+        
+        <div class="bar-item">
+            <div class="bar-label">
+                <span>Active Engagement</span>
+                <span>30%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 30%; background: #00274C;">30%</div>
+            </div>
+        </div>
+        
+        <div class="bar-item">
+            <div class="bar-label">
+                <span>Project 1: Writing Self-Analysis or Narrative</span>
+                <span>20%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 20%; background: #FFCB05; color: #1a1a1a;">20%</div>
+            </div>
+        </div>
+        
+        <div class="bar-item">
+            <div class="bar-label">
+                <span>Project 2: Analyzing Others' Writing</span>
+                <span>20%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 20%; background: #00B2A9;">20%</div>
+            </div>
+        </div>
+        
+        <div class="bar-item">
+            <div class="bar-label">
+                <span>Project 3: Literature Review</span>
+                <span>20%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 20%; background: #A5A508;">20%</div>
+            </div>
+        </div>
+        
+        <div class="bar-item">
+            <div class="bar-label">
+                <span>Project 4: Digital Essay or Writing Guide</span>
+                <span>10%</span>
+            </div>
+            <div class="bar-track">
+                <div class="bar-fill" style="width: 10%; background: #702082;">10%</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
